@@ -11,7 +11,7 @@ Usage
 
 ```ruby
 require 'pdf/info'
-info = PDF::Info.new('/Users/tom/tmp/magazine.pdf')
+info = PDF::Info.new('/Users/tom/tmp/magazine.pdf', 'UTF-8')
 pp info.metadata
 ```
 

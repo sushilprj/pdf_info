@@ -14,8 +14,10 @@ module PDF
 
     def initialize(pdf_path, encoding = nil)
       @pdf_path = pdf_path
+
+      #Fixed ArgumentError: invalid byte sequence in UTF-8
       if encoding
-        self.class.command_path = "pdfinfo -enc '#{encoding}'" #Fixed ArgumentError: invalid byte sequence in UTF-8
+        self.class.command_path = "pdfinfo -enc '#{encoding}'"
       end
     end
 
